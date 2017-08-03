@@ -1,0 +1,115 @@
+// Place all the styles related to the Static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body, html {
+    height: 100%;
+    margin:0;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 35px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer li {
+  display: inline-block;
+  color: lightgrey;
+}
+
+.bgimg-1 {
+  background-image: url('/assets/backimg2.jpg');
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-2 {
+  background-image: url('/assets/backimg4.jpg');
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-3 {
+  background-image: url('/assets/backimg1.jpg');
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-4 {
+  background-image: url('/assets/backimg3.jpg');
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.genTextBox {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  text-align: center;
+}
+.genText {
+  width: 575px;
+  height: 275px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin: auto;
+  padding: 50px;
+  padding-top: 40px;
+}
+.opTextBox {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  text-align: center;
+}
+.opText {
+  width: 300px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin: auto;
+  padding: 50px;
+  padding-top: 20px;
+}
+.buttonLink {
+  height: 30px;
+  width: 200px;
+  margin: auto;
+  padding-top: 4px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}

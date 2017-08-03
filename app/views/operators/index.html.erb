@@ -1,0 +1,44 @@
+<div class="body">
+  <div class="attackers">
+    <h2>Attack Operators</h2>
+    <% @operators.each do |operator| %>
+    <% if operator.role == "Attacker" %>
+    <div class="operator">
+      <div class="<%= operator.name %>-badge">
+
+      </div>
+      <%= link_to operator do %>
+      <%= operator.name %><br />
+      <% end %>
+      <%= operator.main_catagory %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="defenders">
+    <h2>Defense Operators</h2>
+    <% @operators.each do |operator| %>
+    <% if operator.role == "Defender" %>
+    <div class="operator">
+      <div class="<%= operator.name %>-badge">
+
+      </div>
+      <%= link_to operator do %>
+      <%= operator.name %><br />
+      <% end %>
+      <%= operator.main_catagory %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <br>
+  <footer>
+    <nav>
+      <ul>
+        <a href="<%= root_path %>"><li>HOME</li></a>
+        <a href="<%= siege_operators_path %>"><li>OPERATORS</li></a>
+        <a href="<%= siege_guns_path %>"><li>GUNS</li></a>
+      </ul>
+    </nav>
+  </footer>
+</div>

@@ -1,0 +1,255 @@
+// Place all the styles related to the Operators controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  min-height: 100%;
+  background-image: url(siegeSmokeBack.jpg);
+}
+
+.body {
+  background-image: url('/assets/siegeBackground.jpg');
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+div.attackers {
+  border-right: 2px solid black;
+  width: 49.8%;
+  text-align: center;
+  display: inline-block;
+  color: #666;
+}
+div.defenders {
+  width: 49.8%;
+  text-align: center;
+  display: inline-block;
+  color: #666;
+}
+div.operator {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 10px;
+  // float: left;
+  display: inline-block;
+  color: #666;
+}
+
+.Ash-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -256px;
+  margin: auto;
+}
+.Bandit-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px 0;
+  margin: auto;
+}
+.Blackbeard-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -640px;
+  margin: auto;
+}
+.Blitz-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px 0;
+  margin: auto;
+}
+.Buck-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -640px;
+  margin: auto;
+}
+.Capitao-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -768px;
+  margin: auto;
+}
+.Castle-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -256px;
+  margin: auto;
+}
+.Caveira-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -768px;
+  margin: auto;
+}
+.Doc-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -384px;
+  margin: auto;
+}
+.Echo-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -768px;
+  margin: auto;
+}
+.Frost-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -640px;
+  margin: auto;
+}
+.Fuze-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -128px;
+  margin: auto;
+}
+.Glaz-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -128px;
+  margin: auto;
+}
+.Hibana-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -768px;
+  margin: auto;
+}
+.IQ-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px 0;
+  margin: auto;
+}
+.Jackal-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -896px;
+  margin: auto;
+}
+.Jager-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 0;
+  margin: auto;
+}
+.Kapkan-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -128px;
+  margin: auto;
+}
+.Mira-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -896px;
+  margin: auto;
+}
+.Montagne-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -384px;
+  margin: auto;
+}
+.Mute-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -512px;
+  margin: auto;
+}
+.Pulse-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -256px;
+  margin: auto;
+}
+.Rook-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -256px -384px;
+  margin: auto;
+}
+.Sledge-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -512px;
+  margin: auto;
+}
+.Smoke-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -512px;
+  margin: auto;
+}
+.Tachanka-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -384px -128px;
+  margin: auto;
+}
+.Thatcher-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: -128px -512px;
+  margin: auto;
+}
+.Thermite-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -256px;
+  margin: auto;
+}
+.Twitch-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -384px;
+  margin: auto;
+}
+.Valkyrie-badge {
+  background-image: url("/assets/opBadges.png");
+  width: 128px;
+  height: 128px;
+  background-position: 0 -640px;
+  margin: auto;
+}

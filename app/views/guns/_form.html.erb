@@ -1,0 +1,52 @@
+<%= form_with(model: gun, local: true) do |form| %>
+  <% if gun.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gun.errors.count, "error") %> prohibited this gun from being saved:</h2>
+
+      <ul>
+      <% gun.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :damage %>
+    <%= form.text_field :damage, id: :gun_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damage_supp %>
+    <%= form.text_field :damage_supp, id: :gun_damage_supp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rate_of_fire %>
+    <%= form.text_field :rate_of_fire, id: :gun_rate_of_fire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobility %>
+    <%= form.text_field :mobility, id: :gun_mobility %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mag_size %>
+    <%= form.text_field :mag_size, id: :gun_mag_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_ammo_pvp %>
+    <%= form.text_field :max_ammo_pvp, id: :gun_max_ammo_pvp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_ammo_th %>
+    <%= form.text_field :max_ammo_th, id: :gun_max_ammo_th %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Damage:</strong>
+  <%= @gun.damage %>
+</p>
+
+<p>
+  <strong>Damage supp:</strong>
+  <%= @gun.damage_supp %>
+</p>
+
+<p>
+  <strong>Rate of fire:</strong>
+  <%= @gun.rate_of_fire %>
+</p>
+
+<p>
+  <strong>Mobility:</strong>
+  <%= @gun.mobility %>
+</p>
+
+<p>
+  <strong>Mag size:</strong>
+  <%= @gun.mag_size %>
+</p>
+
+<p>
+  <strong>Max ammo pvp:</strong>
+  <%= @gun.max_ammo_pvp %>
+</p>
+
+<p>
+  <strong>Max ammo th:</strong>
+  <%= @gun.max_ammo_th %>
+</p>
+
+<%= link_to 'Edit', edit_gun_path(@gun) %> |
+<%= link_to 'Back', guns_path %>

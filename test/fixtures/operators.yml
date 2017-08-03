@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pick_rate: 1.5
+  win_rate: 1.5
+  kda: 1.5
+
+two:
+  pick_rate: 1.5
+  win_rate: 1.5
+  kda: 1.5
