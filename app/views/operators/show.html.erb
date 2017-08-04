@@ -1,25 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<img style="float:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>" src="/assets/small-<%= @operator.name %>.png" alt="">
+<div style="float:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>;" class="img">
+  <img id="op" src="/assets/small-<%= @operator.name %>.png" alt="">
+</div>
 
-<p>
-  <strong>Pick rate:</strong>
-  <%= @operator.pick_rate %>
-</p>
+<div style="float:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>;" class="img">
+  <img id="gadget" src="/assets/<%= @operator.name %>_gadget.png" alt="">
+</div>
 
-<p>
-  <strong>Win rate:</strong>
-  <%= @operator.win_rate %>
-</p>
+<div class="info" style="clear: both;">
+  <p>
+    <strong>Pick rate:</strong>
+    <%= @operator.pick_rate %>
+  </p>
 
-<p>
-  <strong>Guns:</strong>
-  <% @guns.each do |gun| %>
+  <p>
+    <strong>Win rate:</strong>
+    <%= @operator.win_rate %>
+  </p>
+
+  <p>
+    <strong>Guns:</strong>
+    <% @guns.each do |gun| %>
     <% if gun.operators.detect{|o| o.name == @operator.name} %>
-      <%= link_to gun.name, gun_path %>
+    <%= link_to gun.name, gun_path %>
     <% end %>
-  <% end %>
-</p>
+    <% end %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_operator_path(@operator) %> |
 <%= link_to 'Back', operators_path %>

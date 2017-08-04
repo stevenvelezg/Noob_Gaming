@@ -2,37 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  margin: 0;
   min-height: 100%;
-  background-image: url(siegeSmokeBack.jpg);
-}
-
-.body {
-  background-image: url('/assets/siegeBackground.jpg');
-
-  /* Full height */
-  min-height: 100%;
-
-  /* Create the parallax scrolling effect */
   position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
+  background-image: url(siegeSmokeBack.jpg);
+}
+div.searchArea {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  min-height: 100%;
+  vertical-align: top;
+}
+div.search {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  min-height: 100%;
+  vertical-align: top;
+  position: fixed;
+  left: 0;
+  h2, h3{
+    text-decoration: underline;
+  }
 }
 div.attackers {
   border-right: 2px solid black;
-  width: 49.8%;
+  width: 36.6%;
   text-align: center;
   display: inline-block;
   color: #666;
+  min-height: 100%;
+  vertical-align: top;
 }
 div.defenders {
-  width: 49.8%;
+  width: 36.6%;
   text-align: center;
   display: inline-block;
   color: #666;
+  min-height: 100%;
+  vertical-align: top;
 }
 div.operator {
   width: 40%;
@@ -42,7 +54,15 @@ div.operator {
   display: inline-block;
   color: #666;
 }
-
+.ctu, .role, .armor, .speed {
+  display: inline-block;
+  width: 48.9%;
+  vertical-align: top;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
 .Ash-badge {
   background-image: url("/assets/opBadges.png");
   width: 128px;
@@ -252,4 +272,13 @@ div.operator {
   height: 128px;
   background-position: 0 -640px;
   margin: auto;
+}
+
+div.img {
+}
+img#op {
+  width: 300px;
+}
+img#gadget {
+  width: 200px;
 }

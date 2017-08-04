@@ -62,6 +62,26 @@ class OperatorsController < ApplicationController
     end
   end
 
+  def organization_search
+    @operators = Operator.where( organization: params[:organization] )
+    render template: 'operators/index'
+  end
+
+  def main_catagory_search
+    @operators = Operator.where( main_catagory: params[:main_catagory] )
+    render template: 'operators/index'
+  end
+
+  def speed_search
+    @operators = Operator.where( speed: params[:speed] )
+    render template: 'operators/index'
+  end
+
+  def armor_search
+    @operators = Operator.where( armor: params[:armor] )
+    render template: 'operators/index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_operator
