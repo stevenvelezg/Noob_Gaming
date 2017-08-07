@@ -12,9 +12,22 @@
 
 ActiveRecord::Schema.define(version: 20170731180427) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "body"
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "gun_ops", force: :cascade do |t|
-    t.integer "operator_id"
-    t.integer "gun_id"
+    t.bigint "operator_id"
+    t.bigint "gun_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gun_id"], name: "index_gun_ops_on_gun_id"
@@ -32,7 +45,7 @@ ActiveRecord::Schema.define(version: 20170731180427) do
     t.integer "max_ammo_th"
     t.string "weapon_type"
     t.string "organization"
-    t.integer "operator_id"
+    t.bigint "operator_id"
     t.string "sights"
     t.string "underbarrel"
     t.string "barrel"
@@ -40,6 +53,11 @@ ActiveRecord::Schema.define(version: 20170731180427) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["operator_id"], name: "index_guns_on_operator_id"
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "operators", force: :cascade do |t|
@@ -52,8 +70,28 @@ ActiveRecord::Schema.define(version: 20170731180427) do
     t.string "organization"
     t.integer "speed"
     t.integer "armor"
+    t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "fname"
+    t.string "lname"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
 end

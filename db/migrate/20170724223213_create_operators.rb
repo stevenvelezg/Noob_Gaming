@@ -10,6 +10,7 @@ class CreateOperators < ActiveRecord::Migration[5.1]
       t.string :organization
       t.integer :speed
       t.integer :armor
+      t.string :video
 
       t.timestamps
     end

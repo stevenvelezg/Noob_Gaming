@@ -17,7 +17,13 @@ Rails.application.routes.draw do
 
   get '/siege/guns/t/:weapon_type' => 'guns#type_search'
 
-  # get '/siege/guns/:organization' => 'guns#'
+  get '/siege/operators/o/:organization' => 'operators#organization_search'
+
+  get '/siege/operators/c/:main_catagory' => 'operators#main_catagory_search'
+
+  get '/siege/operators/s/:speed' => 'operators#speed_search'
+
+  get '/siege/operators/a/:armor' => 'operators#armor_search'
 
   resources :guns
   resources :operators
