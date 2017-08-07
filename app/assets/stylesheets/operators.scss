@@ -275,10 +275,35 @@ ul {
 }
 
 div.img {
+
+  margin-bottom: 70px;
 }
 img#op {
-  width: 300px;
+  width: 450px;
 }
 img#gadget {
-  width: 200px;
+  width: 400px;
+  transform: translateY(-110%);
+}
+div.tipsInfo p, div.tipsInfo li {
+  width: 800px;
+  float: left;
+  font-size: 15px;
+  line-height: 35px;
+  color: white;
+}
+div.genInfo {
+  color: white;
+  height: 750px;
+}
+div.genInfo p, div.genInfo li{
+  width: 800px;
+  font-size: 15px;
+  line-height: 35px;
+  list-style: initial;
+}
+div.tipsInfo {
+  padding-top: 30px;
+  margin-left: 30px;
+  color: white;
 }
