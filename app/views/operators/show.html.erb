@@ -1,10 +1,10 @@
-<h1><%= @operator.name %></h1>
-<div style="float:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>;" class="img">
-  <img id="op" src="/assets/small-<%= @operator.name %>.png" alt="">
+<h1 style="color: white; position: absolute; top: 5px; left: 70px; text-decoration: underline;"><%= @operator.name %></h1>
+<div class="img">
+  <img id="op<%= @operator.name %>" src="/assets/small-<%= @operator.name %>.png" alt="">
 </div>
 
 
-<div class="genInfo" style="float:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>;">
+<div class="genInfo<%= @operator.name %>">
   <p>
     <strong>Pick rate:</strong>
     <%= @operator.pick_rate %>
@@ -15,16 +15,8 @@
     <%= @operator.win_rate %>
   </p>
 
-  <p>
-    <strong>Guns:</strong>
-    <% @guns.each do |gun| %>
-      <% if gun.operators.detect{|o| o.name == @operator.name} %>
-        <%= link_to gun.name, gun_path(gun.id) %>
-      <% end %>
-    <% end %>
-  </p>
+  <h3>General Tips</h3>
   <% if @operator.name == "Thermite" %>
-    <h3>General Tips</h3>
     <ul>
       <li>Thermite is a reinforced breacher, giving him a VIP status on the team. If Thermite dies, you are almost guaranteed to lose the match due to being the only person who can breach. This is slightly less so if you have a Hibana however.</li>
       <li>Due to his role on the team, he is played very support centric until he can move up with his team to breach by holding angles, droning out for his fraggers, and just doing his best to not die.</li>
@@ -58,7 +50,6 @@
       <li>This isn't very important but a good idea is to use supressor on Pulses UMP and pistol as a way to hide bullet trails when you are wallbanging.</li>
     </ul>
   <% elsif @operator.name == "Twitch" %>
-    <h3>General Tips</h3>
     <ul>
       <li>The most important tip is <strong>DO NOT</strong> go to the objective room with your drone during prep phase. This is an almost guaranteed way to lose your drone. Use this time instead to take out cameras throughout the map.</li>
       <li>Don't zap people. This is another way to lose your drone. Only do it to kill an AFK or DBNO enemy or to set up a kill for your team by distracting the opponent.</li>
@@ -68,7 +59,6 @@
       <li>A less important tip but still good to know. Consider taking laser sights on the F2 as the spread is good already and this just makes it better while going from hip fire to ADS.</li>
     </ul>
   <% elsif @operator.name == "Doc" %>
-    <h3>General Tips</h3>
     <ul>
       <li>There are three playstyles to Doc: Aggro Doc which is very heavy on peaking and trading damage, then healing himself back up after, Defensive Doc who uses his overheal at the end of a round when attackers are likely to try to get to the point or when a rush is coming, and Passive Doc who heals during the round after a teammate or himself takes lots of damage. A good Doc knows how to switch between these throughout the round.</li>
       <li>Although Aggro Doc is a thing, that doesn't mean to wildly peak. Be smart and peek when it's safe.</li>
@@ -80,7 +70,6 @@
       <li>If you can have a Rook on the team, Doc works very well with him as his armor can help a person survive longer and having Doc overheal just makes a person last even more.</li>
     </ul>
   <%elsif @operator.name == "Rook" %>
-    <h3>General Tips</h3>
     <ul>
       <li>Always, always, ALWAYS put your armor down as soon as you spawn.</li>
       <li>Remind your team at all times to pick up the armor.</li>
@@ -89,12 +78,29 @@
       <li>For people slightly more comfortable, you can take his shotgun and can use it to make a hole above a well used entrance. This way you can watch from above and killing people without them seeing you.</li>
       <li>Use your impact grenades as a way of making rotation holes between bombs or when you want to play vertically as they are good for creating holes in breakable surfaces.</li>
     </ul>
+  <% elsif @operator.name == "Mute" %>
+    <ul>
+      <li>At the start of prep phase, place two jammers near the two most likely drone entrances, reinforce the two walls you can, place your other jammers near a Mira window or Castle baricade, then destroy all drones stopped by your jammers and move those jammers to other areas like those mentioned above. This is the most efficient use of your time in prep phase and you should be done just as prep ends.</li>
+      <li>Do not roam! You aren't that great at it. You're kinda fat and you have way too much to do that by the time you're done, people will be inside at that point. If you are going to roam anyways, stay close to objective.</li>
+      <li>If there's only one other anchor, stay on point. You aren't an aggresive operator by any means, nor do you have any good ranged weapons, so you need to be close to point.</li>
+      <li>Always have your jammers in good spots. You work well with Castle due to not allowing Fuze to do his thing through a baricade as well as with Mira by not letting Hibana or Thermite get their thing done on the windows.</li>
+    </ul>
+  <% elsif @operator.name == "Smoke" %>
+    <ul>
+      <li>Smoke is meant as an anchor on site. He is best played patiently by staying on site with barbed wire on entrances and looking through Mira's windows or hiding behind cover.</li>
+      <li>Keep your smokes until less than 1 minute, that way you make a desperation entery attempt much harder to pull off. Careful throwing your smokes however as getting shot in the arm is the same as the chest.</li>
+      <li>You are literally the best person to fight off shield operators. Just use barbed wire and smoke them out to force them to retreat or die.</li>
+      <li>Since you don't have much to place during prep phase, go reinforce hatches above or walls far from the objective.</li>
+      <li>Learn to play vertically. Use your shotgun to blow open holes in the ceiling and throw gas through them or through the floor to get some surprise kills on people. </li>
+      <li>Learn the arc on your smokes. It helps a lot when you can put smokes exactly where you want them.</li>
+      <li>Learn the typical plant sites on each map so you can set up a trap there. A good example is washing machine on Oregon basement.</li>
+    </ul>
   <% end %>
 </div>
 
-<div class="tipsInfo" style="clear:<% if @operator.role == 'Defender' %>right<% else %>left<% end %>;">
+<div class="tipsInfo<%= @operator.name %>">
+<h3>Loadout</h3>
 <% if @operator.name == "Thermite" %>
-  <h3>Loadout</h3>
   <ul>
     <li><u><a href="/guns/4">556xi</a></u>: This is Thermite's go-to gun for the most part. It has excellent recoil, good per bullet damage, though has a lower rate of fire, making it a great distance weapon which fits into his playstyle very well.</li>
     <li><u><a href="/guns/43">M1014</a></u>: This is a semi-auto shotgun carried by FBI SWAT. This gun is only useful at close range so it's not recommended to take it unless you are playing rush Thermite.</li>
@@ -104,7 +110,6 @@
     <li><u>Claymore</u>: This is a great tool to take when you want to cover flanks and run out locations. Along with this, it has the added utility of being able to protect a defuser if an enemy isn't careful.</li>
   </ul>
   <% elsif @operator.name == "Ash" %>
-  <h3>Loadout</h3>
   <ul>
     <li><u><a href="/guns/1">R4-C</a></u>: Of all of Ash's guns, this has the fastest time to kill. With high damage and high rate of fire, the gun has very high recoil so it is the best gun to run if you are more comfortable with recoil control as body shots will eat through anyone.</li>
     <li><u><a href="/guns/31">G36C</a></u>: The slower of Ash's primaries, it is best for taking things slower but also being a headhunter due to how accurate the gun can be. This is recommended for people who want to take long ranged engagements.</li>
@@ -132,7 +137,6 @@
       <li><u>Nitro Cell(aka C4)</u>: Highly recommeneded for Pulse due to his ability to set a trap with this by placing it near an entrance that is highly used and waiting until you detect someone.</li>
     </ul>
   <% elsif @operator.name == "Twitch" %>
-    <h3>Loadout</h3>
     <ul>
       <li><u><a href="/guns/10">F2</a></u>: The F2 is a great assault rifle due to its high per bullet damage and rate of fire, while also being extremely accurate in small bursts. This is Twitch's go-to gun for most situations.</li>
       <li><u><a href="/guns/8">417</a></u>: The 417 is the gun for all you people who wanna be Glaz but he was already picked. With a bit less damage than Glaz's rifle, it still does a lot of per bullet damage and has a much higher rate of fire. This is a good gun to go if you'll be playing back and holding or cover angles for the most part.</li>
@@ -143,7 +147,6 @@
       <li><u>Claymore</u>: This is a great gadget on Twitch due to the fact that you will most likely be on your drone most of the time. I would recommend it if you plan to play more defensively.</li>
     </ul>
   <% elsif @operator.name == "Doc" %>
-    <h3>Loadout</h3>
     <ul>
       <li><u><a href="/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
       <li><u><a href="/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
@@ -154,7 +157,6 @@
       <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
     </ul>
   <%elsif @operator.name == "Rook" %>
-    <h3>Loadout</h3>
     <ul>
       <li><u><a href="/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
       <li><u><a href="/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
@@ -164,14 +166,28 @@
       <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose.</li>
       <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
     </ul>
+  <% elsif @operator.name == "Mute" %>
+    <ul>
+      <li><u><a href="/guns/28">MP5K</a></u>: The MP5K is the recommended gun for Mute as it has a high rate of fire, very low recoil with the right setup, though is lacking in the range and damage departments. The gun is great for CQC and is still a strong pick on Mute.</li>
+      <li><u><a href="/guns/26">M590A1</a></u>: Like all other shotguns, it's not recommended to take this but if you prefer a shotgun, go right ahead.</li>
+      <li><u><a href="/guns/48">P226 Mk 25</a></u>: This is your only secondary choice but it's a great pistol if you give it a muzzle break to reduce it's recoil.</li>
+      <li><u>Nitro Cell (aka C4)</u>: Mute's better gadget, it allows him to pick up some easy kills on unsuspecting enemies with enough knowledge.</li>
+      <li><u>Deployable Shield</u>: In theory, it's a good pick up but most of the time it's just better to take the cell. This allows for some cover or for you to put a jammer behind it in case you want to create a chokepoint for drones.</li>
+    </ul>
+  <% elsif @operator.name == "Smoke" %>
+    <ul>
+      <li><u><a href="/guns/26">M590A1</a></u>: The best primary on Smoke, this allows for rotation holes and making lines of sight for you to throw your smokes and just gun people down from unexpected areas.</li>
+      <li><u><a href="/guns/">FMG-9</a></u>: Not a terrible weapon as it has a lot of what you need on any operator but the shotgun still wins out on Smoke due to you having an machine pistol secondary.</li>
+      <li><u><a href="/guns/28">SMG-11</a></u>: The only gun that is a must pick on Smoke. This thing has incredibly high damage for a secondary and has a strangely good accuracy. If you run it, use a compensator for full auto or a flash hider for tap firing.</li>
+      <li><u><a href="/guns/48">P226 Mk 25</a></u>: The P226 is a great pistol if you give it a muzzle break to reduce it's recoil but is still outclassed by the SMG-11.</li>
+      <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose. On Smoke, they aren't great as you have his shotgun for this role.</li>
+      <li><u>Barbed Wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around. This is absolutely better for Smoke.</li>
+    </ul>
   <% end %>
-  <div style="float:<% if @operator.role == 'Defender' %>left<% else %>right<% end %>;" class="img">
-    <img id="gadget" src="/assets/<%= @operator.name %>_gadget.png" alt="">
-  </div>
 </div>
-<!--
-<%= link_to 'Edit', edit_operator_path(@operator) %> |
-<%= link_to 'Back', operators_path %>
+<div class="img">
+  <img id="gadget<%= @operator.name %>" src="/assets/<%= @operator.name %>_gadget.png" alt="">
+</div>
 <footer>
   <nav>
     <ul>
@@ -180,4 +196,4 @@
       <a href="<%= siege_guns_path %>"><li>GUNS</li></a>
     </ul>
   </nav>
-</footer> -->
+</footer>

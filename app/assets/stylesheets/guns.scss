@@ -1,3 +1,100 @@
 // Place all the styles related to the Guns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 10px;
+  margin-bottom: 40px;
+}
+
+.gunImage {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  left: 120px;
+  top: 150px;
+  border: 5px solid white;
+}
+
+.gunInfo {
+  position: absolute;
+  color: white;
+  left: 120px;
+  top: 400px;
+}
+
+.gunBody h1 {
+  position: absolute;
+  top: 10px;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 150px;
+  left: 650px;
+  width: 525px;
+}
+
+.container #tabsMenu {
+  border-bottom: 2px solid darkgrey;
+}
+
+.tab-content {
+  color: white;
+  padding-bottom: 50px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: black;
+  background-color: darkgrey;
+}
+
+.nav-pills>li>a {
+  border-radius: 0;
+}
+
+.nav-icon {
+  width: 35px;
+}
+
+.descriptions {
+  border-bottom: none;
+  list-style: initial;
+}
+
+.gun {
+  display: inline-block;
+  width: 250px;
+  color: white;
+  height: 200px;
+  text-align: center;
+}
+
+.gun img {
+  width: 200px;
+  height: 100px;
+  border: 3px solid white;
+}
+
+.guns {
+  width: 70%;
+  display: inline-block;
+  float: right;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.search {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.gun {
+  padding-top: 40px;;
+  &:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
+}

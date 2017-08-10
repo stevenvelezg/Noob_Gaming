@@ -14,32 +14,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-function goToSiege(){
-
+function showSideMenu() {
+  document.getElementById('backgroundSideMenu').style = "display: block;"
 }
-
-function gotToBB() {
-
+function closeSideMenu() {
+  document.getElementById('backgroundSideMenu').style = "display: none;"
 }
-
-function goTo() {
-
-}
-document.addEventListener("turbolinks:load",function(){
-
-  $( ".cross" ).hide();
-  $( ".menu" ).hide();
-  $( ".hamburger" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-      $( ".hamburger" ).hide();
-      $( ".cross" ).show();
-    });
-  });
-
-  $( ".cross" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-      $( ".cross" ).hide();
-      $( ".hamburger" ).show();
-    });
-  });
-});

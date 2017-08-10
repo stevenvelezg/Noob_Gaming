@@ -1,41 +1,213 @@
 <p id="notice"><%= notice %></p>
-<img src="/assets/<%= @gun.name %>".jpg alt="">
+<div class="gunBody">
+  <img src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/<%= @gun.name %>.jpg" class="gunImage" >
 
-<%= @gun.name %>
-<p>
-  <strong>Damage:</strong>
-  <%= @gun.damage %>
-</p>
+  <h1><%= @gun.name %></h1>
+  <div class="gunInfo">
+    <p>
+      <strong>Damage:</strong>
+      <%= @gun.damage %>
+    </p>
 
-<p>
-  <strong>Damage supp:</strong>
-  <%= @gun.damage_supp %>
-</p>
+    <p>
+      <strong>Rate of fire:</strong>
+      <%= @gun.rate_of_fire %>
+    </p>
 
-<p>
-  <strong>Rate of fire:</strong>
-  <%= @gun.rate_of_fire %>
-</p>
+    <p>
+      <strong>Mag size:</strong>
+      <%= @gun.mag_size %>+ 1
+    </p>
 
-<p>
-  <strong>Mobility:</strong>
-  <%= @gun.mobility %>
-</p>
+    <p>
+      <strong>Max ammo (PVP/TH):</strong>
+      <%= @gun.max_ammo_pvp %>/<%= @gun.max_ammo_th %>
+    </p>
+  </div>
 
-<p>
-  <strong>Mag size:</strong>
-  <%= @gun.mag_size %>
-</p>
+  <div class="container">
+    <ul class="nav nav-pills" id="tabsMenu">
+      <li class="active"><a data-toggle="pill" href="#home"><img src="/assets/sight.png" class="nav-icon"></a></li>
+      <li><a data-toggle="pill" href="#menu1"><img src="/assets/grip.png" class="nav-icon"></a></li>
+      <li><a data-toggle="pill" href="#menu2"><img src="/assets/barrel.png" class="nav-icon"></a></li>
+      <li><a data-toggle="pill" href="#menu3"><img src="/assets/underbarrel.png" class="nav-icon"></a></li>
+    </ul>
 
-<p>
-  <strong>Max ammo pvp:</strong>
-  <%= @gun.max_ammo_pvp %>
-</p>
-
-<p>
-  <strong>Max ammo th:</strong>
-  <%= @gun.max_ammo_th %>
-</p>
-
-<%= link_to 'Edit', edit_gun_path(@gun) %> |
-<%= link_to 'Back', guns_path %>
+    <div class="tab-content">
+        <% if @gun.sights %>
+        <div id="home" class="tab-pane fade in active">
+          <h2>SIGHTS</h2>
+        <% JSON.parse(@gun.sights).each do |sight| %>
+          <% if sight == "ACOG" %>
+            <h4><%= sight %> Sight</h4>
+            <ul class="descriptions">Pros
+              <li>Good for long range engagements</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>Hard to use in CQC due to it's zoom. Can distort your view and block angles to the sides.</li>
+            </ul>
+          <% elsif sight == "Red Dot" %>
+            <h4><%= sight %> Sight</h4>
+            <ul class="descriptions">
+              <li></li>
+            </ul>
+            <ul class="descriptions">
+              <li></li>
+            </ul>
+          <% elsif sight == "Reflex" %>
+            <h4><%= sight %> Sight</h4>
+            <ul class="descriptions">
+              Pros
+              <li>Allows for the most peripheral vision when in ADS, giving you more knowledge of your surroundings.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>They don't help you much and are sort of weird to look through.</li>
+            </ul>
+          <% elsif sight == "Holograpic" %>
+            <h4><%= sight %> Sight</h4>
+            <ul class="descriptions">
+              <li></li>
+            </ul>
+            <ul class="descriptions">
+              <li></li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
+      <% else %>
+        <div id="home" class="tab-pane fade in active">
+          <h2>SIGHTS</h2>
+          <h4>No sights available!</h4>
+        </div>
+      <% end %>
+      <% if @gun.grip %>
+      <div id="menu1" class="tab-pane fade">
+        <h2>GRIP</h2>
+        <% JSON.parse(@gun.grip).each do |grip| %>
+          <% if grip == "Vertical" %>
+            <h4><%= grip %> Grip</h4>
+            <ul class="descriptions">
+              Pros
+              <li>Reduces recoil considerably, allowing you to get more consistent shots.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>If this is your only choice, none. If you can take angled sights, it doesn't have the speed angled has going from hip fire to ADS.</li>
+            </ul>
+          <% elsif grip == "Angled" %>
+            <h4><%= grip %> Grip</h4>
+            <ul class="descriptions">
+              Pros
+              <li>Allows for faster transition from hip fire to ADS and back.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>Not available on every gun and doesn't have the same effect on recoil as horizontal.</li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
+      <% else %>
+      <div id="menu1" class="tab-pane fade">
+        <h2>GRIP</h2>
+        <h4>No grip available!</h4>
+      </div>
+      <% end %>
+      <% if @gun.barrel %>
+      <div id="menu2" class="tab-pane fade">
+        <h2>BARREL</h2>
+        <% JSON.parse(@gun.barrel).each do |barrel| %>
+          <% if barrel == "Suppresor" %>
+            <h4><%= barrel %></h4>
+            <ul class="descriptions">
+              Pros
+              <li>Allows for more silent shots and covers your bullet trail.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>You lose quite a bit of damage on your weapon and it doesn't help your weapons recoil.</li>
+            </ul>
+          <% elsif barrel == "Compensator" %>
+            <h4><%= barrel %></h4>
+            <ul class="descriptions">
+              Pros
+              <li>Great for reducing recoil when going full auto on a gun.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>Doesn't have as great an effect on tab/burst firing.</li>
+            </ul>
+          <% elsif barrel == "Flash Hider" %>
+            <h4><%= barrel %></h4>
+            <ul class="descriptions">
+              Pros
+              <li>Very good at controlling recoil on burt fire.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>Doesn't have much effect when you start shooting for extended periods of time.</li>
+            </ul>
+          <% elsif barrel == "Muzzle Break" %>
+            <h4><%= barrel %></h4>
+            <ul class="descriptions">
+              Pros
+              <li>Great for controlling recoil on single shot firing.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>Has little to no effect on recoil for multiple shots.</li>
+            </ul>
+          <% elsif barrel == "Extended Barrel" %>
+            <h4><%= barrel %></h4>
+            <ul class="descriptions">
+              Pros
+              <li>Deal more damage at further ranges.</li>
+            </ul>
+            <ul class="descriptions">
+              Cons
+              <li>The damage spike isn't much and it doesn't help your weapon's recoil.</li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
+      <% else %>
+      <div id="menu2" class="tab-pane fade">
+        <h2>BARREL</h2>
+        <h4>No barrel available!</h4>
+      </div>
+      <% end %>
+      <% if @gun.underbarrel %>
+      <div id="menu3" class="tab-pane fade">
+        <h2>UNDERBARREL</h2>
+        <% if @gun.underbarrel == "Laser" %>
+          <h4><%= @gun.underbarrel %></h4>
+          <ul class="descriptions">
+            Pros
+            <li>Reduces bullet spread on your weapons.</li>
+          </ul>
+          <ul class="descriptions">
+            Cons
+            <li>If you aren't careful, you can be spotted due to your laser.</li>
+          </ul>
+        <% end %>
+      <% else %>
+      <div id="menu3" class="tab-pane fade">
+        <h2>UNDERBARREL</h2>
+        <h4>No underbarrel available!</h4>
+      </div>
+      <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <nav>
+    <ul>
+      <a href="<%= root_path %>"><li>HOME</li></a>
+      <a href="<%= siege_operators_path %>"><li>OPERATORS</li></a>
+      <a href="<%= siege_guns_path %>"><li>GUNS</li></a>
+    </ul>
+  </nav>
+</footer>

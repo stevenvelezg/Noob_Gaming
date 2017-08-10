@@ -25,6 +25,10 @@ Rails.application.routes.draw do
 
   get '/siege/operators/a/:armor' => 'operators#armor_search'
 
+  get '/siege/guns/:id' => 'guns#show'
+
+  get '/siege/operators/:id' => 'operators#show'
+
   resources :guns
   resources :operators
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

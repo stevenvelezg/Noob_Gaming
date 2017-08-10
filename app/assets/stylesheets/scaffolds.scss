@@ -6,6 +6,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   height: 100%;
+  margin-bottom: 40px;
 }
 
 p, ol, ul, td {
@@ -21,15 +22,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #666;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #000;
-    background-color: #000;
+    color: white;
   }
 }
 
@@ -85,12 +85,29 @@ label {
 }
 
 div.title {
-  display: flex;
+  display: inline-flex;
   text-align: center;
-  float: left;
   width: 400px;
-  height: 600px;
-  border: 2px solid black;
+  height: 230px;
+  margin: 20px;
+}
+
+div.entryBoxes {
+  text-align: center;
+}
+
+div#siege {
+  background-image: url("/assets/siegeBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div#bloodborne {
+  background-image: url("/assets/bloodborneBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.title h2 {
