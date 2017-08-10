@@ -1,23 +1,16 @@
 <h1 style="color: white; position: absolute; top: 5px; left: 70px; text-decoration: underline;"><%= @operator.name %></h1>
-<div class="img">
-  <img id="op<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/small-<%= @operator.name %>.png" alt="">
-</div>
-
-
-<div class="genInfo<%= @operator.name %>">
-  <p>
-    <strong>Pick rate:</strong>
-    <%= @operator.pick_rate %>
-  </p>
-
-  <p>
-    <strong>Win rate:</strong>
-    <%= @operator.win_rate %>
-  </p>
-
-  <h3>General Tips</h3>
-  <% if @operator.name == "Thermite" %>
-    <ul>
+<br>
+<br>
+<div class="row">
+  <% if @operator.role == "Attacker" %>
+  <div class="col-md-4">
+    <img id="op<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/small-<%= @operator.name %>.png" alt="">
+  </div>
+  <% end %>
+  <div class="col-md-8" id="genInfo<%= @operator.name %>" style="<% if @operator.role == "Attacker"%>padding-right: 50px;<%else%>padding-left: 50px;<%end%>">
+    <h3>General Tips</h3>
+    <% if @operator.name == "Thermite" %>
+    <ul id="attackerUL">
       <li>Thermite is a reinforced breacher, giving him a VIP status on the team. If Thermite dies, you are almost guaranteed to lose the match due to being the only person who can breach. This is slightly less so if you have a Hibana however.</li>
       <li>Due to his role on the team, he is played very support centric until he can move up with his team to breach by holding angles, droning out for his fraggers, and just doing his best to not die.</li>
       <li>On bomb, he has a secondary purpose in that he can plant defuser due to being able to take smokes in his loadout. With this it is important to learn the best spots to plant defuser (will be added in the future).</li>
@@ -26,14 +19,14 @@
       <li><em>Always have a Thatcher or Twitch.</em> They are the two operators who will help get rid of Bandit's batteries or Mute's jammers. You can do it yourself from above but it is easier to just have them do it.</li>
       <li><em>Know about Bandit Trick.</em> If you don't know what it is, you can find it <a href="/operators/24">here</a> for a more in-depth look. What it is briefly though is Bandit is able to electrify a reinforcement as you are placing your charge. Be aware and listen!</li>
     </ul>
-  <% elsif @operator.name == "Ash" %>
-    <ul>
+    <% elsif @operator.name == "Ash" %>
+    <ul id="attackerUL">
       <li>Ash is a play maker and if you plan to play her, don't be scared to try and make them. If you know someone is in a room, go around a back door or from above and rush in. Just be confident and take risks on her.</li>
       <li>Use your gadgets. Use them all effectively which will be learned over time but if you die with something on you, it's less useful than if they were used to try to get things done. This includes flashbangs, breaching charge, Ash round, etc.</li>
       <li>You may be on a good solo operator/roam clearer but play with your team at all times. If you hear that someone is in a room and you may be close, think of how you can be useful to the team in this situation. But never ever do you only play on your own and ignore team call outs as that will only be detrimental to the team as a whole.</li>
     </ul>
-  <% elsif @operator.name == "Castle" %>
-    <ul>
+    <% elsif @operator.name == "Castle" %>
+    <ul id="attackerUL">
       <li>Castle has shield trick the same way we have Bandit trick. Shield trick is when you put a deployable shield just outside so that you can still put your baricade up, making it harder to break down the baricade and get in the room unless they have an Ash.</li>
       <li>If a teammate breaks down one of your baricades, you can replace it after. You do not lose your baricades unless they are destroyed.</li>
       <li>Don't reinforce doors until your team has gone where they need to go because they will just break it down and you will have wasted time.</li>
@@ -41,152 +34,167 @@
       <li>Your baricades take 12 melees to take down, which allows for Castle tricking where you melee the baricade 11 times and when you hear a Fuze or something on the baricade, melee it and shoot them as it's not something people expect.</li>
       <li>Mute works incredibly well with Castle. Mute jammers can defend your baricades which would require a Twitch or Thatcher to be able to get past that. If done correctly, it'll be near impossible to get in unless there is a Sledge.</li>
     </ul>
-  <% elsif @operator.name == "Pulse" %>
-    <ul>
+    <% elsif @operator.name == "Pulse" %>
+    <ul id="attackerUL">
       <li>Pulse has three different playstyles: Aggresive flanker and jumping out, bomb plant denial, and information gathering Pulse.</li>
       <li>Aggresive flanker plays in a very cheeky way where you sit by a window that people will just walk past or not really pay attention to. With that, break the bottom of the window with two punches, then vault out for a quick kill.</li>
       <li>Bomb denial plays where you sit in an area above or below the objective with a breakable surface. In this situation, you use your scanner to pick up a kill with C4 or wallbang the enemy as they are standing still.<li>
-      <li>Information gathering is the other way which is played by going to a high traffic area and using scanner to count how many people there are. This way you can tell your team to prepare in a certain area and how much should be prepared for.</li>
-      <li>This isn't very important but a good idea is to use supressor on Pulses UMP and pistol as a way to hide bullet trails when you are wallbanging.</li>
-    </ul>
-  <% elsif @operator.name == "Twitch" %>
-    <ul>
-      <li>The most important tip is <strong>DO NOT</strong> go to the objective room with your drone during prep phase. This is an almost guaranteed way to lose your drone. Use this time instead to take out cameras throughout the map.</li>
-      <li>Don't zap people. This is another way to lose your drone. Only do it to kill an AFK or DBNO enemy or to set up a kill for your team by distracting the opponent.</li>
-      <li>Go into objective only after prep phase as a way to destroy enemy gadgets such as Bandit batteries, Mute jammers, and Mira's windows (which can be shot out by the drone.)</li>
-      <li>Consider your drone your life. If you lose them both, all you are is another gun so protect them well throughout the match.</li>
-      <li>Your drone cannot jump. That would be terrifying if it could jump and shock people. But due to this, you need to make sure to stick to walls with lots of drone holes or stick to areas with lots of cover.</li>
-      <li>A less important tip but still good to know. Consider taking laser sights on the F2 as the spread is good already and this just makes it better while going from hip fire to ADS.</li>
-    </ul>
-  <% elsif @operator.name == "Doc" %>
-    <ul>
-      <li>There are three playstyles to Doc: Aggro Doc which is very heavy on peaking and trading damage, then healing himself back up after, Defensive Doc who uses his overheal at the end of a round when attackers are likely to try to get to the point or when a rush is coming, and Passive Doc who heals during the round after a teammate or himself takes lots of damage. A good Doc knows how to switch between these throughout the round.</li>
-      <li>Although Aggro Doc is a thing, that doesn't mean to wildly peak. Be smart and peek when it's safe.</li>
-      <li>Your healing darts have dropoff and don't fire as straight. Keep this in mind when going to shoot a teammate.</li>
-      <li>Your gadget can heal teammates, remember that. Just don't heal anyone if they only took 10 damage or so, save it for anything over 30 damage.</li>
-      <li>The med gun can instant revive a downed hostage or teammate from range. Use it to your advantage.</li>
-      <li>Don't remove your hands from the keyboard and mouse/controller as you can revive yourself when downed to get back into the fight.</li>
-      <li>Don't use your heal to only heal hurt allies. Use it for overhealing when the other team is pushing as it will give an edge in combat. As well, don't overheal at the start of a round as the overheal doesn't last forever.</li>
-      <li>If you can have a Rook on the team, Doc works very well with him as his armor can help a person survive longer and having Doc overheal just makes a person last even more.</li>
-    </ul>
-  <%elsif @operator.name == "Rook" %>
-    <ul>
-      <li>Always, always, ALWAYS put your armor down as soon as you spawn.</li>
-      <li>Remind your team at all times to pick up the armor.</li>
-      <li>Do not destroy your armor. If someone gets downed, you can pick up another one if some are left over.</li>
-      <li>Rook does very well with Doc. Between your armor and his overheal, you can keep people aliver for a very long time.</li>
-      <li>For people slightly more comfortable, you can take his shotgun and can use it to make a hole above a well used entrance. This way you can watch from above and killing people without them seeing you.</li>
-      <li>Use your impact grenades as a way of making rotation holes between bombs or when you want to play vertically as they are good for creating holes in breakable surfaces.</li>
-    </ul>
-  <% elsif @operator.name == "Mute" %>
-    <ul>
-      <li>At the start of prep phase, place two jammers near the two most likely drone entrances, reinforce the two walls you can, place your other jammers near a Mira window or Castle baricade, then destroy all drones stopped by your jammers and move those jammers to other areas like those mentioned above. This is the most efficient use of your time in prep phase and you should be done just as prep ends.</li>
-      <li>Do not roam! You aren't that great at it. You're kinda fat and you have way too much to do that by the time you're done, people will be inside at that point. If you are going to roam anyways, stay close to objective.</li>
-      <li>If there's only one other anchor, stay on point. You aren't an aggresive operator by any means, nor do you have any good ranged weapons, so you need to be close to point.</li>
-      <li>Always have your jammers in good spots. You work well with Castle due to not allowing Fuze to do his thing through a baricade as well as with Mira by not letting Hibana or Thermite get their thing done on the windows.</li>
-    </ul>
-  <% elsif @operator.name == "Smoke" %>
-    <ul>
-      <li>Smoke is meant as an anchor on site. He is best played patiently by staying on site with barbed wire on entrances and looking through Mira's windows or hiding behind cover.</li>
-      <li>Keep your smokes until less than 1 minute, that way you make a desperation entery attempt much harder to pull off. Careful throwing your smokes however as getting shot in the arm is the same as the chest.</li>
-      <li>You are literally the best person to fight off shield operators. Just use barbed wire and smoke them out to force them to retreat or die.</li>
-      <li>Since you don't have much to place during prep phase, go reinforce hatches above or walls far from the objective.</li>
-      <li>Learn to play vertically. Use your shotgun to blow open holes in the ceiling and throw gas through them or through the floor to get some surprise kills on people. </li>
-      <li>Learn the arc on your smokes. It helps a lot when you can put smokes exactly where you want them.</li>
-      <li>Learn the typical plant sites on each map so you can set up a trap there. A good example is washing machine on Oregon basement.</li>
-    </ul>
-  <% end %>
+        <li>Information gathering is the other way which is played by going to a high traffic area and using scanner to count how many people there are. This way you can tell your team to prepare in a certain area and how much should be prepared for.</li>
+        <li>This isn't very important but a good idea is to use supressor on Pulses UMP and pistol as a way to hide bullet trails when you are wallbanging.</li>
+      </ul>
+      <% elsif @operator.name == "Twitch" %>
+      <ul id="attackerUL">
+        <li>The most important tip is <strong>DO NOT</strong> go to the objective room with your drone during prep phase. This is an almost guaranteed way to lose your drone. Use this time instead to take out cameras throughout the map.</li>
+        <li>Don't zap people. This is another way to lose your drone. Only do it to kill an AFK or DBNO enemy or to set up a kill for your team by distracting the opponent.</li>
+        <li>Go into objective only after prep phase as a way to destroy enemy gadgets such as Bandit batteries, Mute jammers, and Mira's windows (which can be shot out by the drone.)</li>
+        <li>Consider your drone your life. If you lose them both, all you are is another gun so protect them well throughout the match.</li>
+        <li>Your drone cannot jump. That would be terrifying if it could jump and shock people. But due to this, you need to make sure to stick to walls with lots of drone holes or stick to areas with lots of cover.</li>
+        <li>A less important tip but still good to know. Consider taking laser sights on the F2 as the spread is good already and this just makes it better while going from hip fire to ADS.</li>
+      </ul>
+      <% elsif @operator.name == "Doc" %>
+      <ul id="attackerUL">
+        <li>There are three playstyles to Doc: Aggro Doc which is very heavy on peaking and trading damage, then healing himself back up after, Defensive Doc who uses his overheal at the end of a round when attackers are likely to try to get to the point or when a rush is coming, and Passive Doc who heals during the round after a teammate or himself takes lots of damage. A good Doc knows how to switch between these throughout the round.</li>
+        <li>Although Aggro Doc is a thing, that doesn't mean to wildly peak. Be smart and peek when it's safe.</li>
+        <li>Your healing darts have dropoff and don't fire as straight. Keep this in mind when going to shoot a teammate.</li>
+        <li>Your gadget can heal teammates, remember that. Just don't heal anyone if they only took 10 damage or so, save it for anything over 30 damage.</li>
+        <li>The med gun can instant revive a downed hostage or teammate from range. Use it to your advantage.</li>
+        <li>Don't remove your hands from the keyboard and mouse/controller as you can revive yourself when downed to get back into the fight.</li>
+        <li>Don't use your heal to only heal hurt allies. Use it for overhealing when the other team is pushing as it will give an edge in combat. As well, don't overheal at the start of a round as the overheal doesn't last forever.</li>
+        <li>If you can have a Rook on the team, Doc works very well with him as his armor can help a person survive longer and having Doc overheal just makes a person last even more.</li>
+      </ul>
+      <%elsif @operator.name == "Rook" %>
+      <ul id="attackerUL">
+        <li>Always, always, ALWAYS put your armor down as soon as you spawn.</li>
+        <li>Remind your team at all times to pick up the armor.</li>
+        <li>Do not destroy your armor. If someone gets downed, you can pick up another one if some are left over.</li>
+        <li>Rook does very well with Doc. Between your armor and his overheal, you can keep people aliver for a very long time.</li>
+        <li>For people slightly more comfortable, you can take his shotgun and can use it to make a hole above a well used entrance. This way you can watch from above and killing people without them seeing you.</li>
+        <li>Use your impact grenades as a way of making rotation holes between bombs or when you want to play vertically as they are good for creating holes in breakable surfaces.</li>
+      </ul>
+      <% elsif @operator.name == "Mute" %>
+      <ul id="attackerUL">
+        <li>At the start of prep phase, place two jammers near the two most likely drone entrances, reinforce the two walls you can, place your other jammers near a Mira window or Castle baricade, then destroy all drones stopped by your jammers and move those jammers to other areas like those mentioned above. This is the most efficient use of your time in prep phase and you should be done just as prep ends.</li>
+        <li>Do not roam! You aren't that great at it. You're kinda fat and you have way too much to do that by the time you're done, people will be inside at that point. If you are going to roam anyways, stay close to objective.</li>
+        <li>If there's only one other anchor, stay on point. You aren't an aggresive operator by any means, nor do you have any good ranged weapons, so you need to be close to point.</li>
+        <li>Always have your jammers in good spots. You work well with Castle due to not allowing Fuze to do his thing through a baricade as well as with Mira by not letting Hibana or Thermite get their thing done on the windows.</li>
+      </ul>
+      <% elsif @operator.name == "Smoke" %>
+      <ul id="attackerUL">
+        <li>Smoke is meant as an anchor on site. He is best played patiently by staying on site with barbed wire on entrances and looking through Mira's windows or hiding behind cover.</li>
+        <li>Keep your smokes until less than 1 minute, that way you make a desperation entery attempt much harder to pull off. Careful throwing your smokes however as getting shot in the arm is the same as the chest.</li>
+        <li>You are literally the best person to fight off shield operators. Just use barbed wire and smoke them out to force them to retreat or die.</li>
+        <li>Since you don't have much to place during prep phase, go reinforce hatches above or walls far from the objective.</li>
+        <li>Learn to play vertically. Use your shotgun to blow open holes in the ceiling and throw gas through them or through the floor to get some surprise kills on people. </li>
+        <li>Learn the arc on your smokes. It helps a lot when you can put smokes exactly where you want them.</li>
+        <li>Learn the typical plant sites on each map so you can set up a trap there. A good example is washing machine on Oregon basement.</li>
+      </ul>
+      <% end %>
+    </div>
+    <% if @operator.role == "Defender" %>
+    <div class="col-md-4">
+      <img id="op<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/small-<%= @operator.name %>.png" alt="">
+    </div>
+    <% end %>
 </div>
 
-<div class="tipsInfo<%= @operator.name %>">
-<h3>Loadout</h3>
-<% if @operator.name == "Thermite" %>
-  <ul>
-    <li><u><a href="/siege/guns/4">556xi</a></u>: This is Thermite's go-to gun for the most part. It has excellent recoil, good per bullet damage, though has a lower rate of fire, making it a great distance weapon which fits into his playstyle very well.</li>
-    <li><u><a href="/siege/guns/43">M1014</a></u>: This is a semi-auto shotgun carried by FBI SWAT. This gun is only useful at close range so it's not recommended to take it unless you are playing rush Thermite.</li>
-    <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
-    <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
-    <li><u>Smoke Greanades</u>: As mentioned before, both gadgets are great and useful. Smokes are good for covering lines of sight on a push, covering a defuser plant, and the small added bonus of allowing Glaz to go banana hunting.</li>
-    <li><u>Claymore</u>: This is a great tool to take when you want to cover flanks and run out locations. Along with this, it has the added utility of being able to protect a defuser if an enemy isn't careful.</li>
-  </ul>
-  <% elsif @operator.name == "Ash" %>
-  <ul>
-    <li><u><a href="/siege/guns/1">R4-C</a></u>: Of all of Ash's guns, this has the fastest time to kill. With high damage and high rate of fire, the gun has very high recoil so it is the best gun to run if you are more comfortable with recoil control as body shots will eat through anyone.</li>
-    <li><u><a href="/siege/guns/31">G36C</a></u>: The slower of Ash's primaries, it is best for taking things slower but also being a headhunter due to how accurate the gun can be. This is recommended for people who want to take long ranged engagements.</li>
-    <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
-    <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
-    <li><u>Flashbangs</u>: Possibly the best gadget to go on Ash, it allows her to rush in and control the fight, then repositioning before the effect has ended.</li>
-    <li><u>Breach Charges</u>: Not really as beneficial due to her gadget, you can take this in case your team is severely lacking on the breaching side.</li>
-  </ul>
-  <% elsif @operator.name == "Castle" %>
-    <ul>
-      <li><u><a href="/siege/guns/29">UMP-45</a></u>: UMP-45 is a standard submachine gun that is most accurate in small bursts. This is more recommended as a shotgun requires good map knowledge and confidence.</li>
-      <li><u><a href="/siege/guns/43">M1014</a></u>: Standard shotgun that's pretty good for holding corners. Nothing special.</li>
-      <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
-      <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
-      <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose.</li>
-      <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. </li>
-    </ul>
-  <% elsif @operator.name == "Pulse" %>
-    <ul>
-      <li><u><a href="/siege/guns/29">UMP-45</a></u>: UMP-45 is a standard submachine gun that is most accurate in small bursts. This is a pretty good gun for wallbanging people who don't know you're there.</li>
-      <li><u><a href="/siege/guns/43">M1014</a></u>: Standard shotgun that's pretty good for holding corners. Due to how Pulse plays, the shotgun can be very good for opening holes above an enemy and just killing them quickly before they realize what happened.</li>
-      <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
-      <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
-      <li><u>Barbed wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around.</li>
-      <li><u>Nitro Cell(aka C4)</u>: Highly recommeneded for Pulse due to his ability to set a trap with this by placing it near an entrance that is highly used and waiting until you detect someone.</li>
-    </ul>
-  <% elsif @operator.name == "Twitch" %>
-    <ul>
-      <li><u><a href="/siege/guns/10">F2</a></u>: The F2 is a great assault rifle due to its high per bullet damage and rate of fire, while also being extremely accurate in small bursts. This is Twitch's go-to gun for most situations.</li>
-      <li><u><a href="/siege/guns/8">417</a></u>: The 417 is the gun for all you people who wanna be Glaz but he was already picked. With a bit less damage than Glaz's rifle, it still does a lot of per bullet damage and has a much higher rate of fire. This is a good gun to go if you'll be playing back and holding or cover angles for the most part.</li>
-      <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
-      <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
-      <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
-      <li><u>Breaching Charge</u>: Breaching charge is a good gadget to run in any situation as it allows you to make a walkable hole in any soft wall that defenders forgot to reinforce.</li>
-      <li><u>Claymore</u>: This is a great gadget on Twitch due to the fact that you will most likely be on your drone most of the time. I would recommend it if you plan to play more defensively.</li>
-    </ul>
-  <% elsif @operator.name == "Doc" %>
-    <ul>
-      <li><u><a href="/siege/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
-      <li><u><a href="/siege/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
-      <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
-      <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
-      <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
-      <li><u>Barbed Wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around.</li>
-      <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
-    </ul>
-  <%elsif @operator.name == "Rook" %>
-    <ul>
-      <li><u><a href="/siege/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
-      <li><u><a href="/siege/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
-      <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
-      <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
-      <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
-      <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose.</li>
-      <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
-    </ul>
-  <% elsif @operator.name == "Mute" %>
-    <ul>
-      <li><u><a href="/siege/guns/28">MP5K</a></u>: The MP5K is the recommended gun for Mute as it has a high rate of fire, very low recoil with the right setup, though is lacking in the range and damage departments. The gun is great for CQC and is still a strong pick on Mute.</li>
-      <li><u><a href="/siege/guns/26">M590A1</a></u>: Like all other shotguns, it's not recommended to take this but if you prefer a shotgun, go right ahead.</li>
-      <li><u><a href="/siege/guns/48">P226 Mk 25</a></u>: This is your only secondary choice but it's a great pistol if you give it a muzzle break to reduce it's recoil.</li>
-      <li><u>Nitro Cell (aka C4)</u>: Mute's better gadget, it allows him to pick up some easy kills on unsuspecting enemies with enough knowledge.</li>
-      <li><u>Deployable Shield</u>: In theory, it's a good pick up but most of the time it's just better to take the cell. This allows for some cover or for you to put a jammer behind it in case you want to create a chokepoint for drones.</li>
-    </ul>
-  <% elsif @operator.name == "Smoke" %>
-    <ul>
-      <li><u><a href="/siege/guns/26">M590A1</a></u>: The best primary on Smoke, this allows for rotation holes and making lines of sight for you to throw your smokes and just gun people down from unexpected areas.</li>
-      <li><u><a href="/siege/guns/">FMG-9</a></u>: Not a terrible weapon as it has a lot of what you need on any operator but the shotgun still wins out on Smoke due to you having an machine pistol secondary.</li>
-      <li><u><a href="/siege/guns/28">SMG-11</a></u>: The only gun that is a must pick on Smoke. This thing has incredibly high damage for a secondary and has a strangely good accuracy. If you run it, use a compensator for full auto or a flash hider for tap firing.</li>
-      <li><u><a href="/siege/guns/48">P226 Mk 25</a></u>: The P226 is a great pistol if you give it a muzzle break to reduce it's recoil but is still outclassed by the SMG-11.</li>
-      <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose. On Smoke, they aren't great as you have his shotgun for this role.</li>
-      <li><u>Barbed Wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around. This is absolutely better for Smoke.</li>
-    </ul>
+<div class="row">
+  <% if @operator.role == "Defender" %>
+  <div class="col-md-4" id="img">
+    <img id="gadget<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/<%= @operator.name %>_gadget.png" alt="">
+  </div>
   <% end %>
-</div>
-<div class="img">
-  <img id="gadget<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/<%= @operator.name %>_gadget.png" alt="">
+  <div class="col-md-8" id="tipsInfo<%= @operator.name %>" style="<% if @operator.role == "Attacker"%>padding-left: 50px;<%else%>padding-right: 50px;<%end%>">
+      <h3>Loadout</h3>
+      <% if @operator.name == "Thermite" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/4">556xi</a></u>: This is Thermite's go-to gun for the most part. It has excellent recoil, good per bullet damage, though has a lower rate of fire, making it a great distance weapon which fits into his playstyle very well.</li>
+        <li><u><a href="/siege/guns/43">M1014</a></u>: This is a semi-auto shotgun carried by FBI SWAT. This gun is only useful at close range so it's not recommended to take it unless you are playing rush Thermite.</li>
+        <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
+        <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
+        <li><u>Smoke Greanades</u>: As mentioned before, both gadgets are great and useful. Smokes are good for covering lines of sight on a push, covering a defuser plant, and the small added bonus of allowing Glaz to go banana hunting.</li>
+        <li><u>Claymore</u>: This is a great tool to take when you want to cover flanks and run out locations. Along with this, it has the added utility of being able to protect a defuser if an enemy isn't careful.</li>
+      </ul>
+      <% elsif @operator.name == "Ash" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/1">R4-C</a></u>: Of all of Ash's guns, this has the fastest time to kill. With high damage and high rate of fire, the gun has very high recoil so it is the best gun to run if you are more comfortable with recoil control as body shots will eat through anyone.</li>
+        <li><u><a href="/siege/guns/31">G36C</a></u>: The slower of Ash's primaries, it is best for taking things slower but also being a headhunter due to how accurate the gun can be. This is recommended for people who want to take long ranged engagements.</li>
+        <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
+        <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
+        <li><u>Flashbangs</u>: Possibly the best gadget to go on Ash, it allows her to rush in and control the fight, then repositioning before the effect has ended.</li>
+        <li><u>Breach Charges</u>: Not really as beneficial due to her gadget, you can take this in case your team is severely lacking on the breaching side.</li>
+      </ul>
+      <% elsif @operator.name == "Castle" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/29">UMP-45</a></u>: UMP-45 is a standard submachine gun that is most accurate in small bursts. This is more recommended as a shotgun requires good map knowledge and confidence.</li>
+        <li><u><a href="/siege/guns/43">M1014</a></u>: Standard shotgun that's pretty good for holding corners. Nothing special.</li>
+        <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
+        <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
+        <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose.</li>
+        <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. </li>
+      </ul>
+      <% elsif @operator.name == "Pulse" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/29">UMP-45</a></u>: UMP-45 is a standard submachine gun that is most accurate in small bursts. This is a pretty good gun for wallbanging people who don't know you're there.</li>
+        <li><u><a href="/siege/guns/43">M1014</a></u>: Standard shotgun that's pretty good for holding corners. Due to how Pulse plays, the shotgun can be very good for opening holes above an enemy and just killing them quickly before they realize what happened.</li>
+        <li><u><a href="/siege/guns/38">M45 MEUSOC</a></u>: A solid pistol with high per bullet damage and little recoil with a muzzle break on. This gun is great for killing a downed enemy in one shot and quick switching to it if the enemy is only a shot or two away from dying and your primary is empty. However, you will find this gun lacking in extended fights.</li>
+        <li><u><a href="/siege/guns/44">5.7 USG</a></u>: Another solid pistol. It has less damage than the M45 but has the highest mag size in the game at 21. This should be taken if you are incredibly confident at your ability to hit headshots.</li>
+        <li><u>Barbed wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around.</li>
+        <li><u>Nitro Cell(aka C4)</u>: Highly recommeneded for Pulse due to his ability to set a trap with this by placing it near an entrance that is highly used and waiting until you detect someone.</li>
+      </ul>
+      <% elsif @operator.name == "Twitch" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/10">F2</a></u>: The F2 is a great assault rifle due to its high per bullet damage and rate of fire, while also being extremely accurate in small bursts. This is Twitch's go-to gun for most situations.</li>
+        <li><u><a href="/siege/guns/8">417</a></u>: The 417 is the gun for all you people who wanna be Glaz but he was already picked. With a bit less damage than Glaz's rifle, it still does a lot of per bullet damage and has a much higher rate of fire. This is a good gun to go if you'll be playing back and holding or cover angles for the most part.</li>
+        <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
+        <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
+        <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
+        <li><u>Breaching Charge</u>: Breaching charge is a good gadget to run in any situation as it allows you to make a walkable hole in any soft wall that defenders forgot to reinforce.</li>
+        <li><u>Claymore</u>: This is a great gadget on Twitch due to the fact that you will most likely be on your drone most of the time. I would recommend it if you plan to play more defensively.</li>
+      </ul>
+      <% elsif @operator.name == "Doc" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
+        <li><u><a href="/siege/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
+        <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
+        <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
+        <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
+        <li><u>Barbed Wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around.</li>
+        <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
+      </ul>
+      <%elsif @operator.name == "Rook" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/21">MP5</a></u>: The MP5 is a great gun for most defenders as it has a good amount of damage, nice recoil, and a good mag size. This can kill anyone easily with a few well placed shots.</li>
+        <li><u><a href="/siege/guns/36">P90</a></u>: The P90 is another good weapon with a higher than average rate of fire and is pretty accurate. This is good gun for all ranges and recommended if you aren't comfortable with landing the first few shots on the MP5.</li>
+        <li><u><a href="/siege/guns/34">SG-CQB</a></u>: Shotguns should usually not be run on an attacker unless they have a rapid fire secondary or if you're rushing. You don't really rush on Twitch though.</li>
+        <li><u><a href="/siege/guns/39">P9</a></u>: Unlike your other secondary, the P9 much lower damage but is extremly accurate with a muzzle break and has a larger mag size. Go with this if you aren't comfortable with the LFP586 or you want a more reliable secondary fo frantic moments.</li>
+        <li><u><a href="/siege/guns/35">LFP586</a></u>: Like previously mentioned, the LFP586 is a high damage secondary but has some of the worst recoil in the game. This is a good weapon with very well placed shots but can be difficult to do if you aren't used to it.</li>
+        <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose.</li>
+        <li><u>Deployable Shield</u>: This is a great gadget for creating choke points where the enemy is forced to vault over, giving you an advantage. On the other hand however, you can use this a way to stay in cover and heal a teammate from distance.</li>
+      </ul>
+      <% elsif @operator.name == "Mute" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/28">MP5K</a></u>: The MP5K is the recommended gun for Mute as it has a high rate of fire, very low recoil with the right setup, though is lacking in the range and damage departments. The gun is great for CQC and is still a strong pick on Mute.</li>
+        <li><u><a href="/siege/guns/26">M590A1</a></u>: Like all other shotguns, it's not recommended to take this but if you prefer a shotgun, go right ahead.</li>
+        <li><u><a href="/siege/guns/48">P226 Mk 25</a></u>: This is your only secondary choice but it's a great pistol if you give it a muzzle break to reduce it's recoil.</li>
+        <li><u>Nitro Cell (aka C4)</u>: Mute's better gadget, it allows him to pick up some easy kills on unsuspecting enemies with enough knowledge.</li>
+        <li><u>Deployable Shield</u>: In theory, it's a good pick up but most of the time it's just better to take the cell. This allows for some cover or for you to put a jammer behind it in case you want to create a chokepoint for drones.</li>
+      </ul>
+      <% elsif @operator.name == "Smoke" %>
+      <ul id="defenderUL">
+        <li><u><a href="/siege/guns/26">M590A1</a></u>: The best primary on Smoke, this allows for rotation holes and making lines of sight for you to throw your smokes and just gun people down from unexpected areas.</li>
+        <li><u><a href="/siege/guns/">FMG-9</a></u>: Not a terrible weapon as it has a lot of what you need on any operator but the shotgun still wins out on Smoke due to you having an machine pistol secondary.</li>
+        <li><u><a href="/siege/guns/28">SMG-11</a></u>: The only gun that is a must pick on Smoke. This thing has incredibly high damage for a secondary and has a strangely good accuracy. If you run it, use a compensator for full auto or a flash hider for tap firing.</li>
+        <li><u><a href="/siege/guns/48">P226 Mk 25</a></u>: The P226 is a great pistol if you give it a muzzle break to reduce it's recoil but is still outclassed by the SMG-11.</li>
+        <li><u>Impact Grenade</u>: Impact grenades are a great tool for allowing movement through the map or creating vision for the team. They aren't good at dealing damage however so keep them for the previously mentioned purpose. On Smoke, they aren't great as you have his shotgun for this role.</li>
+        <li><u>Barbed Wire</u>: Barbed wire is an amazing tool as it slows and hurts an enemy's mobility. This can be the difference between life and death sometimes for you and your team while also giving you information when someone is around. This is absolutely better for Smoke.</li>
+      </ul>
+      <% end %>
+  </div>
+  <% if @operator.role == "Attacker" %>
+  <div id="img" class="col-md-4">
+    <img id="gadget<%= @operator.name %>" src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/<%= @operator.name %>_gadget.png" alt="">
+  </div>
+  <% end %>
 </div>
 <footer>
   <nav>

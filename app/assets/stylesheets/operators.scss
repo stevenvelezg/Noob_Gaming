@@ -26,8 +26,11 @@ div.search {
   vertical-align: top;
   position: fixed;
   left: 0;
+  text-align: center;
   h2, h3{
     text-decoration: underline;
+    width: 50%;
+    margin-right: 0;
   }
 }
 div.attackers {
@@ -64,6 +67,16 @@ div.operator {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.row {
+  li {
+    line-height: 200%;
+  }
+}
+
+.col-md-4 {
+  text-align: center;
 }
 .Ash-badge {
   background-image: url("https://s3.us-east-2.amazonaws.com/noob-gaming-assets/opBadges.png");
@@ -277,1294 +290,890 @@ ul {
 }
 
 img#opAsh {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetAsh {
-  width: 400px;
-  position: absolute;
-  bottom: -400px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opBandit {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetBandit {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opBlackbeard {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetBlackbeard {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opBlitz {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetBlitz {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opBuck {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetBuck {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opCapitao {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetCapitao {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opCastle {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetCastle {
-  width: 400px;
-  position: absolute;
-  bottom: -500px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opCaveira {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetCaveira {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opDoc {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetDoc {
-  width: 400px;
-  position: absolute;
-  bottom: -650px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opEcho {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetEcho {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opFrost {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetFrost {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opFuze {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetFuze {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opGlaz {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetGlaz {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opHibana {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetHibana {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opIQ {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetIQ {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opJackal {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetJackal {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opJager {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetJager {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opKapkan {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetKapkan {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opMira {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetMira {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opMontagne {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetMontagne {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opMute {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetMute {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opPulse {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetPulse {
-  width: 400px;
-  position: absolute;
-  bottom: -450px;
-  left: 10px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opRook {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetRook {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opSledge {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetSledge {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 10px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opSmoke {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: -30px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetSmoke {
-  width: 400px;
-  position: absolute;
-  bottom: -500px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opTachanka {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetTachanka {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opThatcher {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetThatcher {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opThermite {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetThermite {
-  width: 400px;
-  position: absolute;
-  bottom: -650px;
-  right: 20px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opTwitch {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetTwitch {
-  width: 400px;
-  position: absolute;
-  bottom: -450px;
-  right: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
 img#opValkyrie {
-  width: 450px;
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  width: 80%;
+padding-top: 50%;
 }
 img#gadgetValkyrie {
-  width: 400px;
-  position: absolute;
-  bottom: -350px;
-  left: 50px;
+  width: 80%;
+padding-top: 50%;
 }
 
-div.genInfoAsh {
+div#genInfoAsh {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
+    color: white;
     list-style: initial;
   }
 }
-div.tipsInfoAsh {
+div#tipsInfoAsh {
+  height: 80%;
   color: white;
-  position: absolute;
-  bottom: -350px;
-  left: 30px;
-  height: 50%;
-  width: 800px;
-  margin-bottom: 30px;
   padding-bottom: 50px;
-  p, li {
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoBandit {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoBandit {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoBandit {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoBlackbeard {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoBlackbeard {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoBandit {
+  height: 80%;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoBlitz {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoBlitz {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoBlackbeard {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoBuck {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoBuck {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoBlackbeard {
+  height: 80%;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoCapitao {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoCapitao {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoBlitz {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoCastle {
-  color: white;
-  height: 750px;
-  position: absolute;
-  top: 80px;
-  left: 70px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoCastle {
-  padding-top: 30px;
+div#tipsInfoBlitz {
+  height: 80%;
   color: white;
-  position: absolute;
-  bottom: -650px;
-  right: 90px;
-  width: 750px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoCaveira {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 80px;
-  top: 70px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoCaveira {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoBuck {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoDoc {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoDoc {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoBuck {
+  height: 80%;
   color: white;
-  position: absolute;
-  right: 80px;
-  bottom: -925px;
-  width: 750px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoEcho {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoEcho {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoCapitao {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoFrost {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoFrost {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoCapitao {
+  height: 80%;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoFuze {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoFuze {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoCastle {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoGlaz {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoGlaz {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoCastle {
+  height: 80%;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoHibana {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoHibana {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoCaveira {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoIQ {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoIQ {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoCaveira {
+  height: 80%;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoJackal {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoJackal {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoDoc {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoJager {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoJager {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoDoc {
+  height: 80%;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoKapkan {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoKapkan {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoEcho {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoMira {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoMira {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoEcho {
+  height: 80%;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoMontagne {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoMontagne {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoFuze {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoMute {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoMute {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoFuze {
+  height: 80%;
   color: white;
-  position: absolute;
-  bottom: -450px;
-  right: 80px;
-  width: 750px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoPulse {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoPulse {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoGlaz {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  bottom: -650px;
-  right: 90px;
-  width: 750px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoRook {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoRook {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoGlaz {
+  height: 80%;
   color: white;
-  position: absolute;
-  bottom: -650px;
-  right: 80px;
-  width: 750px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoSledge {
-  color: white;
-  height: 750px;
-  position: absolute;
-  top: 80px;
-  right: 50px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoSledge {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoHibana {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  bottom: -450px;
-  left: 70px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoSmoke {
-  color: white;
-  height: 750px;
-  position: absolute;
-  top: 80px;
-  left: 70px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoSmoke {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoHibana {
+  height: 80%;
   color: white;
-  position: absolute;
-  right: 80px;
-  bottom: -650px;
-  width: 750px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoTachanka {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 70px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoTachanka {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoIQ {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoThatcher {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoThatcher {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoIQ {
+  height: 80%;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoThermite {
-  color: white;
-  height: 750px;
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoThermite {
+div#genInfoJackal {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  left: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoTwitch {
-  color: white;
-  height: 750px;
-  position: absolute;
-  right: 10px;
-  top: 80px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoTwitch {
-  padding-top: 30px;
-  margin-left: 30px;
+div#tipsInfoJackal {
+  height: 80%;
   color: white;
-  position: absolute;
-  bottom: -675px;
-  left: 10px;
   padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
-  }
-}
-
-div.genInfoValkyrie {
-  color: white;
-  height: 750px;
-  position: absolute;
-  left: 80px;
-  top: 70px;
-  p, li{
-    width: 800px;
-    font-size: 15px;
-    line-height: 35px;
     list-style: initial;
   }
 }
-div.tipsInfoValkyrie {
-  padding-top: 30px;
-  margin-left: 30px;
+div#genInfoJager {
+  height: 80%;
+  padding-top: 60px;
   color: white;
-  position: absolute;
-  right: 30px;
-  bottom: -800px;
-  padding-bottom: 50px;
-  p, li {
-    width: 800px;
-    float: left;
-    font-size: 15px;
-    line-height: 35px;
+  ul{
+    font-size: 150%;
     color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoJager {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoKapkan {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoKapkan {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoMira {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoMira {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoMontagne {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoMontagne {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoMute {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoMute {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoPulse {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoPulse {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoRook {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoRook {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoSledge {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoSledge {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoSmoke {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoSmoke {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoTachanka {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoTachanka {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoThatcher {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoThatcher {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoThermite {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoThermite {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoTwitch {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoTwitch {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoValkyrie {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoValkyrie {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#genInfoFrost {
+  height: 80%;
+  padding-top: 60px;
+  color: white;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+div#tipsInfoFrost {
+  height: 80%;
+  color: white;
+  padding-bottom: 50px;
+  ul{
+    font-size: 150%;
+    color: white;
+    list-style: initial;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  img {
+    display: none;
+  }
+  ul {
+    margin-bottom: 50px;
+  }
+  #attackerUL {
+    padding-left: 40px;
+  }
+  #defenderUL {
+    padding-left: 40px;
+  }
+  .guns img, .gunBody img {
+    display: block;
   }
 }
