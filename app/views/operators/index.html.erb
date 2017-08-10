@@ -44,7 +44,7 @@
       <div class="operator">
         <div class="<%= operator.name %>-badge">
         </div>
-        <%= link_to operator do %>
+        <%= link_to siege_operator_path(operator) do %>
           <%= operator.name %><br />
         <% end %>
         <%= operator.organization %>
@@ -59,7 +59,7 @@
       <div class="operator">
         <div class="<%= operator.name %>-badge">
         </div>
-        <%= link_to operator do %>
+        <%= link_to siege_operator_path(operator) do %>
           <%= operator.name %><br />
         <% end %>
         <%= operator.organization %>

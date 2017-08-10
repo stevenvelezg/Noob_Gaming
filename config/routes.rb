@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   get '/siege/operators/a/:armor' => 'operators#armor_search'
 
-  get '/siege/guns/:id' => 'guns#show'
+  get '/siege/guns/:id' => 'guns#show', as: :siege_gun
 
-  get '/siege/operators/:id' => 'operators#show'
+  get '/siege/operators/:id' => 'operators#show', as: :siege_operator
 
   resources :guns
   resources :operators

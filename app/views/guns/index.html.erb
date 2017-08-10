@@ -19,7 +19,7 @@
 
 <div class="guns">
   <% @guns.each do |gun| %>
-    <%= link_to gun, class: "gunLink" do %>
+    <%= link_to siege_gun_path(gun), class: "gunLink" do %>
         <div class="gun">
           <div class="hoverEffect"></div>
           <img src="https://s3.us-east-2.amazonaws.com/noob-gaming-assets/<%= gun.name %>.jpg"><br/>
