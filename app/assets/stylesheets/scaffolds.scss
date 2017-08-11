@@ -7,7 +7,9 @@ body {
   line-height: 18px;
   height: 100%;
   margin-bottom: 40px;
-  background-color: #343C45;
+  background-image: url("https://s3.us-east-2.amazonaws.com/noob-gaming-assets/siegeSmokeBack.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
 }
 
 p, ol, ul, td {
