@@ -80,7 +80,7 @@
 #sideMenu ul {
 	margin: 0;
 	padding: 0;
-  padding-top: 200px;
+  padding-top: 50px;
 	list-style-type: none;
 	list-style-image: none;
 }
@@ -104,6 +104,7 @@
 }
 
 #sideMenu h3 {
+  text-align: center;
   margin: auto;
   width: 60%;
   text-decoration: underline;

@@ -19,10 +19,18 @@
     <div id="backgroundSideMenu">
       <div id="sideMenu">
         <ul>
+          <h3>General</h3>
+          <a class="navMenuLinks" href="<%= root_path %>"><li>HOME</li></a>
+          <a class="navMenuLinks" href="/about"><li>ABOUT</li></a>
+          <br>
           <h3>Rainbow Six Siege</h3>
+          <a class="navMenuLinks" href="/siege"><li>MAIN PAGE</li></a>
           <a class="navMenuLinks" href="<%= siege_general_path %>"><li>GENERAL</li></a>
           <a class="navMenuLinks" href="<%= siege_operators_path %>"><li>OPERATORS</li></a>
           <a class="navMenuLinks" href="<%= siege_guns_path %>"><li>GUNS</li></a>
+          <br>
+          <h3>Bloodborne</h3>
+          <a class="navMenuLinks" href="/bloodborne"><li>MAIN PAGE</li></a>
         </ul>
       </div>
       <div class="circleClose" onclick="closeSideMenu()">
