@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   get '/siege/operators/:id' => 'operators#show', as: :siege_operator
 
+  get '/about' => 'static#contact_us'
+
   resources :guns
   resources :operators
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

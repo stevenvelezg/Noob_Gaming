@@ -30,7 +30,9 @@ div.search {
   h2, h3{
     text-decoration: underline;
     width: 50%;
-    margin-right: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
 }
 div.attackers {
@@ -58,6 +60,9 @@ div.operator {
   // float: left;
   display: inline-block;
   color: #666;
+  &:hover {
+    color: white;
+  }
 }
 .ctu, .role, .armor, .speed {
   display: inline-block;

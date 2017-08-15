@@ -41,14 +41,14 @@
   <h2>Attack Operators</h2>
   <% @operators.each do |operator| %>
     <% if operator.role == "Attacker" %>
+    <%= link_to siege_operator_path(operator) do %>
       <div class="operator">
         <div class="<%= operator.name %>-badge">
         </div>
-        <%= link_to siege_operator_path(operator) do %>
           <%= operator.name %><br />
-        <% end %>
         <%= operator.organization %>
       </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
@@ -56,14 +56,14 @@
   <h2>Defense Operators</h2>
   <% @operators.each do |operator| %>
     <% if operator.role == "Defender" %>
+    <%= link_to siege_operator_path(operator) do %>
       <div class="operator">
         <div class="<%= operator.name %>-badge">
         </div>
-        <%= link_to siege_operator_path(operator) do %>
           <%= operator.name %><br />
-        <% end %>
         <%= operator.organization %>
       </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
