@@ -3,7 +3,7 @@
 Links: 
 
 * [Github](https://github.com/svelezg/Noob_Gaming/)
-* [Deployed Version](https://www.noob-gaming.co)
+* [Deployed Version](http://www.noob-gaming.co)
 
 Technology Used: 
 
